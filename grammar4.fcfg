@@ -1,0 +1,20 @@
+S -> NP VP
+NP -> ProperNoun
+
+VP -> VP ARG
+VP -> V
+
+ARG -> PP
+# IN IS PREPOSITIONS
+PP -> IN
+PP -> NP
+
+NP -> Noun
+
+
+ProperNoun -> 'Guinevere'
+V -> 'rides'
+IN -> 'on'
+Noun -> 'Mondays'
+
+
