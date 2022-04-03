@@ -1,0 +1,17 @@
+S -> Wh-NP VP
+Wh-NP -> wh
+
+VP -> VP ARG
+VP -> Aux
+ARG -> NP
+NP -> ProperNoun
+NP -> VP
+VP -> V
+
+wh -> 'when'
+ProperNoun -> 'Guinevere'
+V -> 'ride'
+Aux -> 'does'
+
+
+

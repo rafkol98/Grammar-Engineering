@@ -1,0 +1,25 @@
+S -> NP VP
+NP -> ProperNoun
+
+VP -> VP ARG
+VP -> V
+ARG -> PP
+PP -> Prep
+ARG -> NP
+
+NP -> ARG
+ARG -> Det | CC | NP
+
+CC -> VP
+PP -> NP
+NP -> Noun
+
+CC -> 'and'
+ProperNoun -> 'Arthur'
+V -> 'rides' | 'drinks'
+Prep -> 'near' | 'from'
+Det -> 'the'
+Noun -> 'castle' | 'chalice'
+
+
+
