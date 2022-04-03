@@ -1,0 +1,19 @@
+S -> Wh-NP NP
+Wh-NP -> Wh ARG
+ARG -> NP
+
+NP -> NP ARG
+ARG -> VP
+
+NP -> ProperNoun
+NP -> Noun
+
+VP -> VP ARG
+VP -> V
+
+Wh -> 'when'
+ProperNoun -> 'Arthur' | 'Guinevere'
+V -> 'drinks' | 'sighs'
+Noun -> 'beer'
+
+
