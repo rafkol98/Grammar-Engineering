@@ -1,4 +1,7 @@
 S -> NP VP
+
+NP -> NP ARG
+ARG -> NP
 NP -> ProperNoun
 NP -> Conj
 NP -> Noun

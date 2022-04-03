@@ -1,0 +1,10 @@
+S -> NP VP
+NP -> Noun
+NP -> Noun
+VP -> V
+
+
+Noun -> 'horses' | 'water'
+V -> 'drink'
+
+
