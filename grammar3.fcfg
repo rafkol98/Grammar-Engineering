@@ -1,0 +1,17 @@
+S -> NP VP
+NP -> Noun
+
+VP -> VP ARG
+VP -> V
+VP -> Det
+
+ARG -> NP
+ARG -> VP
+ARG -> Noun
+
+
+Noun -> 'Arthur' | 'horse'
+V -> 'rides'
+Det -> 'the'
+
+
