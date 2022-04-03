@@ -1,0 +1,13 @@
+S -> NP VP
+NP -> ProperNoun
+NP -> Conj
+NP -> Noun
+
+VP -> V
+
+ProperNoun -> 'Guinevere'
+Conj -> 'and'
+Noun -> 'Arthur'
+V -> 'sigh'
+
+

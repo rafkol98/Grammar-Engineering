@@ -1,0 +1,8 @@
+S -> NP VP
+NP -> ProperNoun
+VP -> V
+
+ProperNoun -> 'Guinevere'
+V -> 'sighs'
+
+
