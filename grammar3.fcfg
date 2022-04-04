@@ -2,14 +2,11 @@ S -> NP VP
 
 NP -> ProperNoun
 NP -> Noun
+NP -> Det
 
 VP -> VP ARG
 VP -> V
-VP -> Det
-
 ARG -> NP
-ARG -> VP
-ARG -> Noun
 
 ProperNoun -> 'Arthur'
 Noun -> 'horse'

@@ -1,16 +1,10 @@
 S -> NP VP
 
-NP -> NP ARG
-ARG -> NP
-NP -> ProperNoun
-NP -> Conj
-NP -> Noun
-
+NP -> ProperNoun Conj ProperNoun
 VP -> V
 
-ProperNoun -> 'Guinevere'
+ProperNoun -> 'Guinevere' | 'Arthur'
 Conj -> 'and'
-Noun -> 'Arthur'
 V -> 'sigh'
 
 

@@ -2,6 +2,7 @@ S -> NP VP
 NP -> ProperNoun
 
 VP -> VP ARG
+
 ARG -> NP
 NP -> VP
 

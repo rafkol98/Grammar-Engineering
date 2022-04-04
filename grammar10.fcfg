@@ -1,16 +1,13 @@
-S -> NP VP
+S -> NP VP Conj VP
 NP -> ProperNoun
 
-VP -> VP ARG
 VP -> V
-ARG -> CC
 
-CC -> VP
-VP -> NP
-NP -> Noun
-NP -> CC
+VP -> V ARG
+ARG -> NP
+NP -> Noun Conj Noun
 
-CC -> 'and'
+Conj -> 'and'
 ProperNoun -> 'Arthur'
 V -> 'rides' | 'drinks'
 Noun -> 'beer' | 'water'

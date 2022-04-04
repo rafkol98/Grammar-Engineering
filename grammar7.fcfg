@@ -1,14 +1,13 @@
 S -> Wh-NP NP
-Wh-NP -> Wh ARG
-ARG -> NP
+Wh-NP -> Wh NP
 
-NP -> NP ARG
-ARG -> VP
-
+NP -> NP VP
 NP -> ProperNoun
+
 NP -> Noun
 
-VP -> VP ARG
+VP -> V ARG
+ARG -> NP
 VP -> V
 
 Wh -> 'when'

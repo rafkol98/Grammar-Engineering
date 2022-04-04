@@ -1,0 +1,28 @@
+S -> NP VP
+NP -> Noun | ProperNoun | Det
+NP -> ProperNoun Conj ProperNoun
+
+VP -> V
+VP -> V ARG
+VP -> VP ARG
+
+ARG -> NP
+
+ProperNoun -> 'Guinevere' | 'Arthur'
+V -> 'sighs' | 'sigh'
+Conj -> 'and'
+Noun -> 'horses' | 'water' | 'horse'
+V -> 'drink' | 'rides'
+Det -> 'the'
+
+
+S -> NP VP
+NP -> ProperNoun
+
+VP -> V PP
+
+PP -> Prep NP
+
+ProperNoun -> 'Guinevere' | 'Mondays'
+V -> 'rides'
+Prep -> 'on'

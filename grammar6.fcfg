@@ -1,30 +1,25 @@
 S -> NP VP
 NP -> ProperNoun
 
-VP -> VP ARG
+VP -> VP PP PP
 
-VP -> V
+VP -> V ARG
 ARG -> NP
-NP -> Det
-NP -> Adj
-Adj -> Adj
-Adj -> NP
 
+NP -> Det Nominal
+NP -> Adj NP
+
+Nominal -> Adj
+Nominal -> NP
 NP -> Noun
-NP -> PP
 
-PP -> NP
-NP -> NP
-PP -> IN
+PP -> Prep NP
+NP -> Prep ProperNoun
 
 
-ProperNoun -> 'Guinevere'
+ProperNoun -> 'Guinevere' | 'Mondays'
 V -> 'rides'
 Det -> 'the'
 Adj -> 'old' | 'white'
-Noun -> 'horse'| 'castle' | 'Mondays'
-IN -> 'near' | 'on'
-
-
-
-
+Noun -> 'horse'| 'castle'
+Prep -> 'near' | 'on'
