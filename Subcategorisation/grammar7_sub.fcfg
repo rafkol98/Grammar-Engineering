@@ -1,12 +1,12 @@
 S -> Wh-NP NP
 
 Wh-NP -> Conj NP
-NP -> NP VP
+NP -> NP VP[SUBCAT=nil]
 NP -> ProperNoun
 
 NP -> Noun
 
-VP -> VP ARG
+VP -> V ARG
 ARG -> NP
 VP -> V
 

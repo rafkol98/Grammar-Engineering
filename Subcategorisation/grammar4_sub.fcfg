@@ -1,0 +1,13 @@
+S -> NP VP[SUBCAT=nil]
+NP -> ProperNoun
+
+VP[SUBCAT=?args] -> V[SUBCAT=?args] PP
+
+PP -> Prep NP
+
+ProperNoun -> 'Guinevere' | 'Mondays'
+V[SUBCAT=nil] -> 'rides'
+Prep -> 'on'
+
+
+

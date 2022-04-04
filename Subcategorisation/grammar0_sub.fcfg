@@ -1,0 +1,10 @@
+S -> NP VP[SUBCAT=nil]
+NP -> ProperNoun
+VP[SUBCAT=?args] -> V[SUBCAT=?args]
+
+ProperNoun -> 'Guinevere'
+
+# intransitive verb
+V[SUBCAT=nil] -> 'sighs'
+
+

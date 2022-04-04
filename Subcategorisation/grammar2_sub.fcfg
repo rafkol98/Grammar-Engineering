@@ -1,0 +1,11 @@
+S -> NP VP[SUBCAT=nil]
+NP -> Noun
+
+VP[SUBCAT=?rest] -> VP[SUBCAT=[HEAD=?arg, TAIL=?rest]] ARG[CAT=?arg]
+VP[SUBCAT=?args] -> V[SUBCAT=?args]
+ARG[CAT=np] -> NP
+
+Noun -> 'horses' | 'water'
+V[SUBCAT=[HEAD=np, TAIL=nil]] -> 'drink'
+
+

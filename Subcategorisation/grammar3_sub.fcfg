@@ -1,0 +1,15 @@
+S -> NP VP[SUBCAT=nil]
+
+NP -> ProperNoun
+NP -> Det Noun
+
+VP[SUBCAT=?rest] -> VP[SUBCAT=[HEAD=?arg, TAIL=?rest]] ARG[CAT=?arg]
+VP[SUBCAT=?args] -> V[SUBCAT=?args]
+ARG[CAT=np] -> NP
+
+ProperNoun -> 'Arthur'
+Noun -> 'horse'
+V[SUBCAT=[HEAD=np, TAIL=nil]] -> 'rides'
+Det -> 'the'
+
+

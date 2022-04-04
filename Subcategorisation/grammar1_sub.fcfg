@@ -1,0 +1,10 @@
+S -> NP VP[SUBCAT=nil]
+
+NP -> ProperNoun Conj ProperNoun
+VP[SUBCAT=?args] -> V[SUBCAT=?args]
+
+ProperNoun -> 'Guinevere' | 'Arthur'
+Conj -> 'and'
+V[SUBCAT=nil] -> 'sigh'
+
+

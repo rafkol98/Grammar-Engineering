@@ -1,0 +1,9 @@
+S -> NP VP[SUBCAT=nil]
+NP -> ProperNoun
+
+VP[SUBCAT=?args] -> V[SUBCAT=?args]
+
+ProperNoun -> 'Arthur'
+V[SUBCAT=nil] -> 'rides'
+
+
