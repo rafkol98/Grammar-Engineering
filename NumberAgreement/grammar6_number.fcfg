@@ -1,0 +1,28 @@
+S -> NP[NUM=?n] VP[TENSE=?t, NUM=?n, SUBCAT=nil]
+VP[TENSE=?t, NUM=?n, SUBCAT=nil]  -> VP[TENSE=?t, NUM=?n, SUBCAT=nil] PP PP
+
+VP[TENSE=?t, NUM=?n, SUBCAT=?rest] -> VP[TENSE=?t, NUM=?n, SUBCAT=[HEAD=?arg, TAIL=?rest]] ARG[CAT=?arg]
+VP[TENSE=?t, NUM=?n, SUBCAT=?args] -> V[TENSE=?t, NUM=?n, SUBCAT=?args]
+ARG[CAT=np] -> NP
+
+NP[NUM=?n] -> Det Nominal[NUM=?n]
+
+Nominal[NUM=?n] -> Adj Nominal[NUM=?n]
+Nominal[NUM=?n] -> Adj NP[NUM=?n]
+NP[NUM=sg] -> Noun[NUM=sg]
+
+PP -> Prep NP[NUM=?n]
+
+# Mondays
+NP[NUM=?n] -> ProperNoun[NUM=?n]
+
+NP[NUM=?n] -> Det Noun[NUM=?n]
+
+
+ProperNoun[NUM=sg] ->  'Guinevere'
+ProperNoun[NUM=pl] ->  'Mondays'
+V[TENSE=pres, NUM=sg, SUBCAT=[HEAD=np, TAIL=nil]] -> 'rides'
+Det -> 'the'
+Adj -> 'old' | 'white'
+Noun[NUM=sg] -> 'horse'| 'castle'
+Prep -> 'near' | 'on'
