@@ -1,28 +1,44 @@
 S -> NP VP
-NP -> Noun | ProperNoun | Det
+S -> Wh-NP NP
+S -> Wh-NP VP
+S -> NP VP Conj VP
+S -> Wh-NP Aux NP VP
+
+Wh-NP -> Wh
+Wh-NP -> Wh NP
+
+NP -> Noun | ProperNoun | Det | VP
+NP -> NP VP
 NP -> ProperNoun Conj ProperNoun
+NP -> Det Nominal
+NP -> Adj NP
+NP -> Prep ProperNoun
+NP -> Det Noun
+NP -> Noun Conj Noun
 
 VP -> V
+VP -> V PP
 VP -> V ARG
 VP -> VP ARG
-
-ARG -> NP
-
-ProperNoun -> 'Guinevere' | 'Arthur'
-V -> 'sighs' | 'sigh'
-Conj -> 'and'
-Noun -> 'horses' | 'water' | 'horse'
-V -> 'drink' | 'rides'
-Det -> 'the'
-
-
-S -> NP VP
-NP -> ProperNoun
-
-VP -> V PP
+VP -> VP PP PP
+VP -> AUX NP
 
 PP -> Prep NP
 
-ProperNoun -> 'Guinevere' | 'Mondays'
-V -> 'rides'
-Prep -> 'on'
+ARG -> NP | PP
+
+PP -> Prep NP
+
+Nominal -> Adj | NP
+
+# Terminals
+Wh -> 'when'
+ProperNoun -> 'Guinevere' | 'Arthur' | 'Mondays'
+V -> 'sighs' | 'sigh' | 'rides' | 'drinks' | 'drink' | 'ride' |  'love' | 'loves'
+Conj -> 'and'
+Noun -> 'horses' | 'water' | 'horse' | 'castle' | 'beer' | 'chalice'
+V -> 'drink' | 'rides' | 'thinks' | 'drinks'
+Det -> 'the'
+Prep -> 'on' | 'near' | 'from'
+Adj -> 'old' | 'white'
+AUX -> 'do' | 'does'
