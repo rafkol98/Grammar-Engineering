@@ -1,4 +1,4 @@
-S -> Wh-NP Aux NP VP
+S -> Wh-NP AUX NP VP
 Wh-NP -> wh
 
 NP -> ProperNoun
@@ -7,4 +7,4 @@ VP -> V
 wh -> 'when'
 ProperNoun -> 'Guinevere'
 V -> 'ride'
-Aux -> 'does'
+AUX -> 'does'

@@ -1,45 +1,41 @@
 S -> NP VP
 S -> Wh-NP NP
-S -> Wh-NP VP
 S -> NP VP Conj VP
-S -> Wh-NP Aux NP VP
-S -> Conj NP
+S -> Wh-NP AUX NP VP
 
-Wh-NP -> Wh
-Wh-NP -> Wh NP
+Wh-NP -> wh
+Wh-NP -> Conj NP
 
-NP -> Noun | ProperNoun | Det | VP
-NP -> NP VP
+NP -> ProperNoun
 NP -> ProperNoun Conj ProperNoun
-NP -> Det Nominal
-NP -> Adj NP
-NP -> Prep ProperNoun
 NP -> Det Noun
+NP -> Noun
+NP -> NP VP
 NP -> Noun Conj Noun
 
-VP -> V
-VP -> V PP
-VP -> V ARG
-VP -> VP ARG
-VP -> VP PP PP
 VP -> AUX NP
+VP -> VP PP PP
+VP -> VP ARG
+VP -> VP PP
+VP -> V PP
+VP -> V
+
+ARG -> NP
+ARG -> PP
+
+NP -> Det Nominal
+
+Nominal -> Adj Nominal
+Nominal -> Adj NP
 
 PP -> Prep NP
 
-ARG -> NP | PP
-
-PP -> Prep NP
-
-Nominal -> Adj | NP
-
-# Terminals
-Wh -> 'when'
+V -> 'love' | 'loves' | 'sighs' | 'sigh' | 'drink' | 'rides' | 'drinks' | 'thinks' | 'ride'
 ProperNoun -> 'Guinevere' | 'Arthur' | 'Mondays'
-V -> 'sighs' | 'sigh' | 'rides' | 'drinks' | 'drink' | 'ride' |  'love' | 'loves'
 Conj -> 'and' | 'when'
 Noun -> 'horses' | 'water' | 'horse' | 'castle' | 'beer' | 'chalice'
-V -> 'drink' | 'rides' | 'thinks' | 'drinks'
 Det -> 'the'
-Prep -> 'on' | 'near' | 'from'
+Prep -> 'near' | 'on' | 'from'
 Adj -> 'old' | 'white'
+wh -> 'when'
 AUX -> 'do' | 'does'

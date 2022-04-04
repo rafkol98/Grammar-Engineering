@@ -1,10 +1,12 @@
 S -> NP VP
+NP -> ProperNoun
 
 VP -> VP ARG
 VP -> V
 
-ARG -> NP VP
-NP -> ProperNoun
+ARG -> NP
+
+NP -> NP VP
 
 ARG -> NP
 NP -> Noun
