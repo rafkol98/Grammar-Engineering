@@ -1,7 +1,8 @@
 S -> NP VP
 NP -> Noun
 
-VP -> V ARG
+VP -> VP ARG
+VP -> V
 ARG -> NP
 
 Noun -> 'horses' | 'water'

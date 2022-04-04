@@ -3,21 +3,23 @@ NP -> ProperNoun
 
 VP -> VP PP PP
 
-VP -> V ARG
+VP -> VP ARG
+VP -> V
 ARG -> NP
 
 NP -> Det Nominal
-NP -> Adj NP
 
-Nominal -> Adj
-Nominal -> NP
+Nominal -> Adj Nominal
+Nominal -> Adj NP
 NP -> Noun
 
 PP -> Prep NP
-NP -> Prep ProperNoun
+NP -> ProperNoun
+
+NP -> Det Noun
 
 
-ProperNoun -> 'Guinevere' | 'Mondays'
+ProperNoun ->  'Guinevere' | 'Mondays'
 V -> 'rides'
 Det -> 'the'
 Adj -> 'old' | 'white'

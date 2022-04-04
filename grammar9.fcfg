@@ -1,12 +1,14 @@
 S -> NP VP Conj VP
 NP -> ProperNoun
 
-VP -> V PP
+VP -> VP PP
+VP -> V
+
 PP -> Prep NP
 
 NP -> Det Noun
 
-VP -> V ARG
+VP -> VP ARG
 ARG -> PP
 
 Conj -> 'and'

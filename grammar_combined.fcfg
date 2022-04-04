@@ -3,6 +3,7 @@ S -> Wh-NP NP
 S -> Wh-NP VP
 S -> NP VP Conj VP
 S -> Wh-NP Aux NP VP
+S -> Conj NP
 
 Wh-NP -> Wh
 Wh-NP -> Wh NP
@@ -35,7 +36,7 @@ Nominal -> Adj | NP
 Wh -> 'when'
 ProperNoun -> 'Guinevere' | 'Arthur' | 'Mondays'
 V -> 'sighs' | 'sigh' | 'rides' | 'drinks' | 'drink' | 'ride' |  'love' | 'loves'
-Conj -> 'and'
+Conj -> 'and' | 'when'
 Noun -> 'horses' | 'water' | 'horse' | 'castle' | 'beer' | 'chalice'
 V -> 'drink' | 'rides' | 'thinks' | 'drinks'
 Det -> 'the'

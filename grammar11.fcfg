@@ -5,7 +5,8 @@ VP -> AUX NP
 NP -> NP VP
 NP -> ProperNoun Conj ProperNoun
 
-VP -> V ARG
+VP -> VP ARG
+VP -> V
 ARG -> NP
 NP -> Noun
 

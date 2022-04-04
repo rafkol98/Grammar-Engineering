@@ -1,0 +1,11 @@
+S -> NP VP[SUBCAT=nil]
+NP -> ProperNoun
+
+VP[SUBCAT=?rest] -> VP[SUBCAT=[HEAD=?arg, TAIL=?rest]] ARG[CAT=?arg]
+VP[SUBCAT=?args] -> V[SUBCAT=?args]
+
+ARG[CAT=np] -> NP
+
+V[SUBCAT=[HEAD=np, TAIL=nil]] -> 'loves'
+ProperNoun -> 'Arthur'
+ProperNoun -> 'Guinevere'

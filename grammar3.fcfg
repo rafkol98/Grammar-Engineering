@@ -1,8 +1,7 @@
 S -> NP VP
 
 NP -> ProperNoun
-NP -> Noun
-NP -> Det
+NP -> Det Noun
 
 VP -> VP ARG
 VP -> V

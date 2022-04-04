@@ -1,6 +1,6 @@
 S -> Wh-NP NP
-Wh-NP -> Wh NP
 
+Wh-NP -> Conj NP
 NP -> NP VP
 NP -> ProperNoun
 
@@ -10,7 +10,7 @@ VP -> V ARG
 ARG -> NP
 VP -> V
 
-Wh -> 'when'
+Conj -> 'when'
 ProperNoun -> 'Arthur' | 'Guinevere'
 V -> 'drinks' | 'sighs'
 Noun -> 'beer'
