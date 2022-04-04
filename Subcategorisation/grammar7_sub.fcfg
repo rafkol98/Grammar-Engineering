@@ -1,18 +1,19 @@
 S -> Wh-NP NP
-
 Wh-NP -> Conj NP
 NP -> NP VP[SUBCAT=nil]
 NP -> ProperNoun
 
 NP -> Noun
 
-VP -> V ARG
-ARG -> NP
-VP -> V
+VP[SUBCAT=?rest] -> VP[SUBCAT=[HEAD=?arg, TAIL=?rest]] ARG[CAT=?arg]
+VP[SUBCAT=?args] -> V[SUBCAT=?args]
+ARG[CAT=np] -> NP
+
 
 Conj -> 'when'
 ProperNoun -> 'Arthur' | 'Guinevere'
-V -> 'drinks' | 'sighs'
+V[SUBCAT=[HEAD=np, TAIL=nil]] -> 'drinks'
+V[SUBCAT=nil] -> 'sighs'
 Noun -> 'beer'
 
 

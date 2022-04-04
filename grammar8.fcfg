@@ -1,14 +1,13 @@
 S -> NP VP
-NP -> ProperNoun
 
 VP -> VP ARG
+VP -> V
+
+ARG -> NP VP
+NP -> ProperNoun
 
 ARG -> NP
-NP -> VP
-
-VP -> V
 NP -> Noun
-
 
 ProperNoun -> 'Guinevere' | 'Arthur'
 V -> 'thinks' | 'drinks'

@@ -1,0 +1,10 @@
+S -> Wh-NP Aux NP VP[SUBCAT=nil]
+Wh-NP -> wh
+
+NP -> ProperNoun
+VP[SUBCAT=nil] -> V[SUBCAT=nil]
+
+wh -> 'when'
+ProperNoun -> 'Guinevere'
+V[SUBCAT=nil] -> 'ride'
+Aux -> 'does'

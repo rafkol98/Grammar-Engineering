@@ -1,7 +1,7 @@
 import nltk
 from nltk import FeatureChartParser
 
-fcfg = nltk.data.load('grammar7.fcfg')
+fcfg = nltk.data.load('Subcategorisation/grammar12_sub.fcfg')
 parser = FeatureChartParser(fcfg)
 
 def parse_text(text):

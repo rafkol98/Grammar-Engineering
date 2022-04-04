@@ -1,0 +1,19 @@
+S -> NP VP[SUBCAT=nil] Conj VP[SUBCAT=nil]
+NP -> ProperNoun
+
+VP[SUBCAT=nil] -> V[SUBCAT=nil]
+
+VP[SUBCAT=?rest] -> VP[SUBCAT=[HEAD=?arg, TAIL=?rest]] ARG[CAT=?arg]
+VP[SUBCAT=?args] -> V[SUBCAT=?args]
+
+ARG[CAT=np] -> NP
+NP -> Noun Conj Noun
+
+Conj -> 'and'
+ProperNoun -> 'Arthur'
+V[SUBCAT=nil] -> 'rides'
+V[SUBCAT=[HEAD=np, TAIL=nil]] -> 'drinks'
+Noun -> 'beer' | 'water'
+
+
+

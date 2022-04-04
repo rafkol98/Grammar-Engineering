@@ -1,0 +1,24 @@
+S -> NP VP[SUBCAT=nil] Conj VP[SUBCAT=nil]
+NP -> ProperNoun
+
+VP[SUBCAT=nil] -> VP[SUBCAT=nil] PP
+VP[SUBCAT=nil] -> V[SUBCAT=nil]
+
+PP -> Prep NP
+
+NP -> Det Noun
+
+VP[SUBCAT=?rest] -> VP[SUBCAT=[HEAD=?arg, TAIL=?rest]] ARG[CAT=?arg]
+VP[SUBCAT=?args] -> V[SUBCAT=?args]
+ARG[CAT=pp] -> PP
+
+Conj -> 'and'
+ProperNoun -> 'Arthur'
+V[SUBCAT=nil] -> 'rides'
+V[SUBCAT=[HEAD=pp, TAIL=nil]] -> 'drinks'
+Prep -> 'near' | 'from'
+Det -> 'the'
+Noun -> 'castle' | 'chalice'
+
+
+

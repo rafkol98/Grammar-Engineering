@@ -3,7 +3,7 @@ NP -> ProperNoun
 
 VP -> V
 
-VP -> V ARG
+VP -> VP ARG
 ARG -> NP
 NP -> Noun Conj Noun
 

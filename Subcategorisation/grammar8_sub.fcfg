@@ -1,0 +1,17 @@
+S -> NP VP[SUBCAT=nil]
+
+VP[SUBCAT=?rest] -> VP[SUBCAT=[HEAD=?arg, TAIL=?rest]] ARG[CAT=?arg]
+VP[SUBCAT=?args] -> V[SUBCAT=?args]
+
+#TODO: figure how to do this - with two arguments in ARG
+ARG[CAT=np]-> NP VP
+NP -> ProperNoun
+
+ARG -> NP
+NP -> Noun
+
+ProperNoun -> 'Guinevere' | 'Arthur'
+V -> 'thinks' | 'drinks'
+Noun -> 'water'
+
+
