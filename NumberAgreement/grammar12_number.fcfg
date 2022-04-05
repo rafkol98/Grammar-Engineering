@@ -1,4 +1,4 @@
-S -> Wh-NP  VP[TENSE=?t, NUM=?n, SUBCAT=nil]
+S -> Wh-NP VP[TENSE=?t, NUM=?n, SUBCAT=nil]
 Wh-NP -> wh
 
 NP[NUM=?n] -> ProperNoun[NUM=?n]
