@@ -16,6 +16,7 @@ Nominal -> Adj Nominal | Adj NP
 
 PP -> Prep NP
 
+
 VP[SUBCAT=?rest] -> VP[SUBCAT=[HEAD=?arg, TAIL=?rest]] ARG[CAT=?arg]
 VP[SUBCAT=?args] -> V[SUBCAT=?args]
 
