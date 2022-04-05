@@ -7,16 +7,11 @@ S -> NP[NUM=?n] VP[TENSE=?t, NUM=?n, SUBCAT=nil] Conj VP[TENSE=?t, NUM=?n, SUBCA
 Wh-NP -> Conj NP[NUM=?n]
 Wh-NP -> wh
 
-NP[NUM=?n] -> Noun[NUM=?n]
+NP[NUM=?n] -> Noun[NUM=?n] |  ProperNoun[NUM=?n] | Det Noun[NUM=?n] |  Det Nominal[NUM=?n]
 NP[NUM=?n] -> NP[NUM=?n] VP[TENSE=?t, NUM=?n, SUBCAT=nil]
-NP[NUM=?n] -> Noun[NUM=?n] Conj Noun[NUM=?n]
-NP[NUM=?n] -> ProperNoun[NUM=?n]
-NP[NUM=?n] -> ProperNoun[NUM=?n] Conj ProperNoun[NUM=?n]
-NP[NUM=?n] -> Det Noun[NUM=?n]
-NP[NUM=?n] -> Det Nominal[NUM=?n]
+NP[NUM=?n] -> Noun[NUM=?n] Conj Noun[NUM=?n] | ProperNoun[NUM=?n] Conj ProperNoun[NUM=?n]
 
-Nominal[NUM=?n] -> Adj Nominal[NUM=?n]
-Nominal[NUM=?n] -> Adj NP[NUM=?n]
+Nominal[NUM=?n] -> Adj Nominal[NUM=?n] | Adj NP[NUM=?n]
 
 VP[TENSE=?t, NUM=?n, SUBCAT=nil] -> AUX VP[TENSE=?t, NUM=?n, SUBCAT=nil]
 VP[TENSE=?t, NUM=?n, SUBCAT=?rest] -> VP[TENSE=?t, NUM=?n, SUBCAT=[HEAD=?arg, TAIL=?rest]] ARG[CAT=?arg]
