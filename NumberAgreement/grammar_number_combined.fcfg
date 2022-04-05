@@ -1,7 +1,6 @@
 S -> Wh-NP NP[NUM=?n]
 S -> Wh-NP VP[TENSE=?t, NUM=?n, SUBCAT=nil]
 
-
 S -> NP[NUM=?n] VP[TENSE=?t, NUM=?n, SUBCAT=nil]
 S -> NP[NUM=?n] VP[TENSE=?t, NUM=?n, SUBCAT=nil] Conj VP[TENSE=?t, NUM=?n, SUBCAT=nil]
 
@@ -24,7 +23,7 @@ VP[TENSE=?t, NUM=?n, SUBCAT=?rest] -> VP[TENSE=?t, NUM=?n, SUBCAT=[HEAD=?arg, TA
 VP[TENSE=?t, NUM=?n, SUBCAT=?args] -> VP[TENSE=?t, NUM=?n, SUBCAT=?args] PP
 VP[TENSE=?t, NUM=?n, SUBCAT=nil]  -> VP[TENSE=?t, NUM=?n, SUBCAT=nil] PP PP
 VP[TENSE=?t, NUM=?n, SUBCAT=?args] -> V[TENSE=?t, NUM=?n, SUBCAT=?args]
-VP[TENSE=?t, NUM=?n, SUBCAT=nil] -> NP[NUM=?n] V[TENSE=?t, NUM=?n, SUBCAT=nil]
+VP[TENSE=?t, NUM=?n, SUBCAT=nil] -> NP[NUM=?n] VP[TENSE=?t, NUM=?n, SUBCAT=nil]
 
 ARG[CAT=s] -> S
 ARG[CAT=np] -> NP[NUM=?n]
@@ -42,6 +41,7 @@ V[TENSE=pres, NUM=sg, SUBCAT=[HEAD=pp, TAIL=nil]] -> 'drinks'
 Noun[NUM=pl]  -> 'horses'
 Noun[NUM=sg] -> 'water' | 'horse' | 'castle' | 'beer' | 'chalice'
 V[TENSE=pres, NUM=pl, SUBCAT=[HEAD=np, TAIL=nil]] -> 'drink'
+V[TENSE=pres, NUM=sg, SUBCAT=[HEAD=np, TAIL=nil]] -> 'drink'
 Det -> 'the'
 Prep -> 'near' | 'on' | 'from'
 Adj -> 'old' | 'white'

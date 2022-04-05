@@ -1,8 +1,8 @@
 S -> Wh-NP VP[TENSE=?t, NUM=?n, SUBCAT=nil]
 Wh-NP -> wh
 
-VP[TENSE=?t, NUM=?n, SUBCAT=nil] -> AUX NP[NUM=?n]
-NP[NUM=?n] -> NP[NUM=?n] VP[TENSE=?t, NUM=?n, SUBCAT=nil]
+VP[TENSE=?t, NUM=?n, SUBCAT=nil] -> AUX VP[TENSE=?t, NUM=?n, SUBCAT=nil]
+VP[TENSE=?t, NUM=?n, SUBCAT=nil] -> NP[NUM=?n] VP[TENSE=?t, NUM=?n, SUBCAT=nil]
 NP[NUM=?n] -> ProperNoun[NUM=?n] Conj ProperNoun[NUM=?n]
 
 VP[TENSE=?t, NUM=?n, SUBCAT=?rest] -> VP[TENSE=?t, NUM=?n, SUBCAT=[HEAD=?arg, TAIL=?rest]] ARG[CAT=?arg]
