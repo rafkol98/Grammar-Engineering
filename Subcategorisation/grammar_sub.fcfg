@@ -9,3 +9,5 @@ ARG[CAT=np] -> NP
 V[SUBCAT=[HEAD=np, TAIL=nil]] -> 'loves'
 ProperNoun -> 'Arthur'
 ProperNoun -> 'Guinevere'
+
+
