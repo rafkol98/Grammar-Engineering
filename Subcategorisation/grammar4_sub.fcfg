@@ -1,7 +1,8 @@
 S -> NP VP[SUBCAT=nil]
 NP -> ProperNoun
 
-VP[SUBCAT=?args] -> V[SUBCAT=?args] PP
+VP[SUBCAT=?args] -> VP[SUBCAT=?args] PP
+VP[SUBCAT=?args] -> V[SUBCAT=?args]
 
 PP -> Prep NP
 

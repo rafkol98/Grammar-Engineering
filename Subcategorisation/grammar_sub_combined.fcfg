@@ -16,14 +16,14 @@ Nominal -> Adj Nominal | Adj NP
 
 PP -> Prep NP
 
-VP[SUBCAT=nil] -> VP[SUBCAT=nil] PP
-VP[SUBCAT=nil] -> V[SUBCAT=nil]
-VP[SUBCAT=nil] -> VP[SUBCAT=nil] PP PP
-VP[SUBCAT=nil] -> AUX NP
-
 VP[SUBCAT=?rest] -> VP[SUBCAT=[HEAD=?arg, TAIL=?rest]] ARG[CAT=?arg]
 VP[SUBCAT=?args] -> V[SUBCAT=?args]
-VP[SUBCAT=?args] -> V[SUBCAT=?args] PP
+
+VP[SUBCAT=?args] -> VP[SUBCAT=?args] PP
+VP[SUBCAT=?args] -> V[SUBCAT=?args]
+VP[SUBCAT=?args] -> VP[SUBCAT=?args] PP PP
+VP[SUBCAT=?args] -> AUX NP
+
 
 ARG[CAT=np] -> NP
 ARG[CAT=pp] -> PP
