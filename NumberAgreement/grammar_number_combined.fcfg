@@ -1,6 +1,7 @@
 S -> Wh-NP NP[NUM=?n]
 S -> Wh-NP VP[TENSE=?t, NUM=?n, SUBCAT=nil]
 S -> Wh-NP AUX NP VP[TENSE=?t, NUM=?n, SUBCAT=nil]
+
 S -> NP[NUM=?n] VP[TENSE=?t, NUM=?n, SUBCAT=nil]
 S -> NP[NUM=?n] VP[TENSE=?t, NUM=?n, SUBCAT=nil] Conj VP[TENSE=?t, NUM=?n, SUBCAT=nil]
 

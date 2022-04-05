@@ -1,8 +1,10 @@
-S -> Wh-NP AUX NP VP[TENSE=?t, NUM=?n, SUBCAT=nil]
+S -> Wh-NP  VP[TENSE=?t, NUM=?n, SUBCAT=nil]
 Wh-NP -> wh
 
 NP[NUM=?n] -> ProperNoun[NUM=?n]
-VP[TENSE=?t, NUM=?n, SUBCAT=nil] -> V[TENSE=?t, NUM=?n, SUBCAT=nil]
+VP[TENSE=?t, NUM=?n, SUBCAT=nil] -> AUX VP[TENSE=?t, NUM=?n, SUBCAT=nil]
+
+VP[TENSE=?t, NUM=?n, SUBCAT=nil] -> NP[NUM=?n] V[TENSE=?t, NUM=?n, SUBCAT=nil]
 
 wh -> 'when'
 ProperNoun[NUM=sg] -> 'Guinevere'
