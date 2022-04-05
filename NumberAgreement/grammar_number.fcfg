@@ -1,0 +1,13 @@
+S -> NP[NUM=?n] VP[TENSE=?t, NUM=?n, SUBCAT=nil]
+NP[NUM=?n] -> ProperNoun[NUM=?n]
+
+VP[TENSE=?t, NUM=?n, SUBCAT=?rest] -> VP[TENSE=?t, NUM=?n, SUBCAT=[HEAD=?arg, TAIL=?rest]] ARG[CAT=?arg]
+VP[TENSE=?t, NUM=?n, SUBCAT=?args] -> V[TENSE=?t, NUM=?n, SUBCAT=?args]
+
+ARG[CAT=np] -> NP[NUM=?n]
+
+V[TENSE=pres, NUM=sg, SUBCAT=[HEAD=np, TAIL=nil]] -> 'loves'
+ProperNoun[NUM=sg] -> 'Arthur'
+ProperNoun[NUM=sg]  -> 'Guinevere'
+
+
