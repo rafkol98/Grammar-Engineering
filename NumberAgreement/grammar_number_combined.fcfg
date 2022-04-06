@@ -1,12 +1,13 @@
-S -> WS S
-S -> AUX NP[NUM=?n] VP[TENSE=?t, NUM=?n, SUBCAT=nil]
+S -> WhNP AUX NP[NUM=?n] VP[TENSE=?t, NUM=?n, SUBCAT=nil]
+S -> SBAR NP[NUM=?n] VP[TENSE=?t, NUM=?n, SUBCAT=nil]
 S -> NP[NUM=?n] VP[TENSE=?t, NUM=?n, SUBCAT=nil]
-S -> NP[NUM=?n] VP[TENSE=?t, NUM=?n, SUBCAT=nil] Conj VP[TENSE=?t, NUM=?n, SUBCAT=nil]
+S -> NP[NUM=?n] VP[TENSE=?t, NUM=?n, SUBCAT=nil] CC VP[TENSE=?t, NUM=?n, SUBCAT=nil]
+SBAR -> IN NP[NUM=?n] VP[TENSE=?t, NUM=?n, SUBCAT=nil]
 
-WS -> Wh-adv | Wh-adv NP[NUM=?n] VP[TENSE=?t, NUM=?n, SUBCAT=nil]
+WhNP -> Wh-adv
 
 NP[NUM=?n] -> Noun[NUM=?n] |  ProperNoun[NUM=?n] | Det Noun[NUM=?n]
-NP[NUM=?n] -> Noun[NUM=?n] Conj Noun[NUM=?n] | ProperNoun[NUM=?n] Conj ProperNoun[NUM=?n]
+NP[NUM=?n] -> Noun[NUM=?n] CC Noun[NUM=?n] | ProperNoun[NUM=?n] CC ProperNoun[NUM=?n]
 # For "the old white horse"
 NP[NUM=?n] -> Det Adj Adj Noun[NUM=?n]
 
@@ -32,7 +33,8 @@ Noun[NUM=pl]  -> 'horses'
 Noun[NUM=sg] -> 'water' | 'horse' | 'castle' | 'beer' | 'chalice'
 V[TENSE=pres, NUM=pl, SUBCAT=[HEAD=np, TAIL=nil]] -> 'drink'
 V[TENSE=pres, NUM=sg, SUBCAT=[HEAD=np, TAIL=nil]] -> 'drink'
-Conj -> 'and'
+IN -> 'when'
+CC -> 'and'
 Det -> 'the'
 Prep -> 'near' | 'on' | 'from'
 Adj -> 'old' | 'white'
