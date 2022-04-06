@@ -1,28 +1,18 @@
 S -> WS S
-WS -> Wh-adv
-WS -> Wh-adv NP[NUM=?n] VP[TENSE=?t, NUM=?n, SUBCAT=nil]
 S -> AUX NP[NUM=?n] VP[TENSE=?t, NUM=?n, SUBCAT=nil]
-
 S -> NP[NUM=?n] VP[TENSE=?t, NUM=?n, SUBCAT=nil]
 S -> NP[NUM=?n] VP[TENSE=?t, NUM=?n, SUBCAT=nil] Conj VP[TENSE=?t, NUM=?n, SUBCAT=nil]
 
+WS -> Wh-adv | Wh-adv NP[NUM=?n] VP[TENSE=?t, NUM=?n, SUBCAT=nil]
 
-
-NP[NUM=?n] -> Noun[NUM=?n] |  ProperNoun[NUM=?n] | Det Noun[NUM=?n] |  Det Nominal[NUM=?n]
+NP[NUM=?n] -> Noun[NUM=?n] |  ProperNoun[NUM=?n] | Det Noun[NUM=?n]
 NP[NUM=?n] -> Noun[NUM=?n] Conj Noun[NUM=?n] | ProperNoun[NUM=?n] Conj ProperNoun[NUM=?n]
-
-Nominal[NUM=?n] -> Adj Nominal[NUM=?n] | Adj NP[NUM=?n]
-
-#TODO: experimenting with 11 and 12.
-# S -> Wh-NP VP[TENSE=?t, NUM=?n, SUBCAT=nil]
-# Wh-NP -> Wh-adv
-# VP[TENSE=?t, NUM=?n, SUBCAT=nil] -> AUX VP[TENSE=?t, NUM=?n, SUBCAT=nil]
-# VP[TENSE=?t, NUM=?n, SUBCAT=nil] -> NP[NUM=?n] VP[TENSE=?t, NUM=?n, SUBCAT=nil]
-
+# For "the old white horse"
+NP[NUM=?n] -> Det Adj Adj Noun[NUM=?n]
 
 VP[TENSE=?t, NUM=?n, SUBCAT=?rest] -> VP[TENSE=?t, NUM=?n, SUBCAT=[HEAD=?arg, TAIL=?rest]] ARG[CAT=?arg]
 VP[TENSE=?t, NUM=?n, SUBCAT=?args] -> VP[TENSE=?t, NUM=?n, SUBCAT=?args] PP
-VP[TENSE=?t, NUM=?n, SUBCAT=?args]  -> VP[TENSE=?t, NUM=?n, SUBCAT=args] PP PP
+VP[TENSE=?t, NUM=?n, SUBCAT=?args] -> VP[TENSE=?t, NUM=?n, SUBCAT=args] PP PP
 VP[TENSE=?t, NUM=?n, SUBCAT=?args] -> V[TENSE=?t, NUM=?n, SUBCAT=?args]
 
 ARG[CAT=s] -> S
@@ -31,9 +21,9 @@ ARG[CAT=pp] -> PP
 
 PP -> Prep NP[NUM=?n]
 
+# Terminals
 ProperNoun[NUM=sg] -> 'Guinevere' | 'Arthur'
 ProperNoun[NUM=pl] ->  'Mondays'
-Conj -> 'and'
 V[TENSE=pres, NUM=sg, SUBCAT=[HEAD=s, TAIL=nil]] -> 'thinks'
 V[TENSE=pres, NUM=sg, SUBCAT=nil] -> 'sigh' | 'sighs' | 'rides' | 'ride'
 V[TENSE=pres, NUM=sg, SUBCAT=[HEAD=np, TAIL=nil]] -> 'loves' | 'rides' | 'drinks'
@@ -42,9 +32,9 @@ Noun[NUM=pl]  -> 'horses'
 Noun[NUM=sg] -> 'water' | 'horse' | 'castle' | 'beer' | 'chalice'
 V[TENSE=pres, NUM=pl, SUBCAT=[HEAD=np, TAIL=nil]] -> 'drink'
 V[TENSE=pres, NUM=sg, SUBCAT=[HEAD=np, TAIL=nil]] -> 'drink'
+Conj -> 'and'
 Det -> 'the'
 Prep -> 'near' | 'on' | 'from'
 Adj -> 'old' | 'white'
 Wh-adv -> 'when'
 AUX -> 'do'| 'does'
-Wh-adv -> 'when'
