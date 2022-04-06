@@ -1,14 +1,15 @@
 S -> Wh-NP NP[NUM=?n]
+
+S -> WS S
+WS -> Wh-adv S
 S -> Wh-NP VP[TENSE=?t, NUM=?n, SUBCAT=nil]
 
 S -> NP[NUM=?n] VP[TENSE=?t, NUM=?n, SUBCAT=nil]
 S -> NP[NUM=?n] VP[TENSE=?t, NUM=?n, SUBCAT=nil] Conj VP[TENSE=?t, NUM=?n, SUBCAT=nil]
 
-Wh-NP -> Conj NP[NUM=?n]
 Wh-NP -> wh
 
 NP[NUM=?n] -> Noun[NUM=?n] |  ProperNoun[NUM=?n] | Det Noun[NUM=?n] |  Det Nominal[NUM=?n]
-NP[NUM=?n] -> NP[NUM=?n] VP[TENSE=?t, NUM=?n, SUBCAT=nil]
 NP[NUM=?n] -> Noun[NUM=?n] Conj Noun[NUM=?n] | ProperNoun[NUM=?n] Conj ProperNoun[NUM=?n]
 
 Nominal[NUM=?n] -> Adj Nominal[NUM=?n] | Adj NP[NUM=?n]
@@ -28,7 +29,7 @@ PP -> Prep NP[NUM=?n]
 
 ProperNoun[NUM=sg] -> 'Guinevere' | 'Arthur'
 ProperNoun[NUM=pl] ->  'Mondays'
-Conj -> 'and' | 'when'
+Conj -> 'and'
 V[TENSE=pres, NUM=sg, SUBCAT=[HEAD=s, TAIL=nil]] -> 'thinks'
 V[TENSE=pres, NUM=sg, SUBCAT=nil] -> 'sigh' | 'sighs' | 'rides' | 'ride'
 V[TENSE=pres, NUM=sg, SUBCAT=[HEAD=np, TAIL=nil]] -> 'loves' | 'rides' | 'drinks'
@@ -42,9 +43,4 @@ Prep -> 'near' | 'on' | 'from'
 Adj -> 'old' | 'white'
 wh -> 'when'
 AUX -> 'do'| 'does'
-
-
-
-
-
-
+Wh-adv -> 'when'
