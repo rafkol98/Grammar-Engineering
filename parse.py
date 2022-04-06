@@ -1,7 +1,7 @@
 import nltk
 from nltk import FeatureChartParser
 
-fcfg = nltk.data.load('NumberAgreement/grammar_number_combined.fcfg')
+fcfg = nltk.data.load('NumberAgreement/grammar12_number.fcfg')
 parser = FeatureChartParser(fcfg)
 
 def parse_text(text):
@@ -24,4 +24,4 @@ def parse_file(name):
 print("================ Positive examples ================")
 parse_file('positives.txt')
 print("================ Negative examples ================")
-parse_file('negatives.txt')
+# parse_file('negatives.txt')

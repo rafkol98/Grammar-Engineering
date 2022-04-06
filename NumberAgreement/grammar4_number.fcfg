@@ -1,8 +1,7 @@
 S -> NP[NUM=?n] VP[TENSE=?t, NUM=?n, SUBCAT=nil]
 NP[NUM=?n] -> ProperNoun[NUM=?n]
 
-VP[TENSE=?t, NUM=?n, SUBCAT=?args] -> VP[TENSE=?t, NUM=?n, SUBCAT=?args] PP
-VP[TENSE=?t, NUM=?n, SUBCAT=?args] -> V[TENSE=?t, NUM=?n, SUBCAT=?args]
+VP[TENSE=?t, NUM=?n, SUBCAT=?args] -> V[TENSE=?t, NUM=?n, SUBCAT=?args] PP
 
 PP -> Prep NP[NUM=?n]
 

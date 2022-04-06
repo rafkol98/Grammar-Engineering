@@ -1,8 +1,7 @@
 S -> NP[NUM=?n] VP[TENSE=?t, NUM=?n, SUBCAT=nil]
 NP[NUM=?n] -> Noun[NUM=?n]
 
-VP[TENSE=?t, NUM=?n, SUBCAT=?rest] -> VP[TENSE=?t, NUM=?n, SUBCAT=[HEAD=?arg, TAIL=?rest]] ARG[CAT=?arg]
-VP[TENSE=?t, NUM=?n, SUBCAT=?args] -> V[TENSE=?t, NUM=?n, SUBCAT=?args]
+VP[TENSE=?t, NUM=?n, SUBCAT=?rest] -> V[TENSE=?t, NUM=?n, SUBCAT=[HEAD=?arg, TAIL=?rest]] ARG[CAT=?arg]
 ARG[CAT=np] -> NP[NUM=?n]
 
 Noun[NUM=pl]  -> 'horses'

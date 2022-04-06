@@ -1,21 +1,14 @@
 S -> NP[NUM=?n] VP[TENSE=?t, NUM=?n, SUBCAT=nil]
 VP[TENSE=?t, NUM=?n, SUBCAT=nil]  -> VP[TENSE=?t, NUM=?n, SUBCAT=nil] PP PP
 
-VP[TENSE=?t, NUM=?n, SUBCAT=?rest] -> VP[TENSE=?t, NUM=?n, SUBCAT=[HEAD=?arg, TAIL=?rest]] ARG[CAT=?arg]
-VP[TENSE=?t, NUM=?n, SUBCAT=?args] -> V[TENSE=?t, NUM=?n, SUBCAT=?args]
+VP[TENSE=?t, NUM=?n, SUBCAT=?rest] -> V[TENSE=?t, NUM=?n, SUBCAT=[HEAD=?arg, TAIL=?rest]] ARG[CAT=?arg]
 ARG[CAT=np] -> NP[NUM=?n]
 
-NP[NUM=?n] -> Det Nominal[NUM=?n]
-
-Nominal[NUM=?n] -> Adj Nominal[NUM=?n]
-Nominal[NUM=?n] -> Adj NP[NUM=?n]
-NP[NUM=?n] -> Noun[NUM=?n]
+NP[NUM=?n] -> Det Adj Adj Noun[NUM=?n]
 
 PP -> Prep NP[NUM=?n]
 
-# Mondays
 NP[NUM=?n] -> ProperNoun[NUM=?n]
-
 NP[NUM=?n] -> Det Noun[NUM=?n]
 
 

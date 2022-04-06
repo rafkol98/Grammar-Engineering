@@ -1,8 +1,7 @@
-S -> NP[NUM=?n] VP[TENSE=?t, NUM=?n, SUBCAT=nil] Conj VP[TENSE=?t, NUM=?n,SUBCAT=nil]
+S -> NP[NUM=?n] VP[TENSE=?t, NUM=?n, SUBCAT=nil]
 NP[NUM=?n] -> ProperNoun[NUM=?n]
 
-# VP[TENSE=?t, NUM=?n, SUBCAT=nil] -> V[TENSE=?t, NUM=?n, SUBCAT=nil]
-
+VP[TENSE=?t, NUM=?n, SUBCAT=nil] -> VP[TENSE=?t, NUM=?n, SUBCAT=nil] Conj VP[TENSE=?t, NUM=?n, SUBCAT=nil]
 VP[TENSE=?t, NUM=?n, SUBCAT=?rest] -> VP[TENSE=?t, NUM=?n, SUBCAT=[HEAD=?arg, TAIL=?rest]] ARG[CAT=?arg]
 VP[TENSE=?t, NUM=?n, SUBCAT=?args] -> V[TENSE=?t, NUM=?n, SUBCAT=?args]
 

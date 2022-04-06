@@ -1,8 +1,6 @@
-S -> Wh-NP VP[TENSE=?t, NUM=?n, SUBCAT=nil]
-Wh-NP -> wh
+S -> Wh-adv S
+S -> AUX NP[NUM=?n] VP[TENSE=?t, NUM=?n, SUBCAT=nil]
 
-VP[TENSE=?t, NUM=?n, SUBCAT=nil] -> AUX VP[TENSE=?t, NUM=?n, SUBCAT=nil]
-VP[TENSE=?t, NUM=?n, SUBCAT=nil] -> NP[NUM=?n] VP[TENSE=?t, NUM=?n, SUBCAT=nil]
 NP[NUM=?n] -> ProperNoun[NUM=?n] Conj ProperNoun[NUM=?n]
 
 VP[TENSE=?t, NUM=?n, SUBCAT=?rest] -> VP[TENSE=?t, NUM=?n, SUBCAT=[HEAD=?arg, TAIL=?rest]] ARG[CAT=?arg]
@@ -10,8 +8,7 @@ VP[TENSE=?t, NUM=?n, SUBCAT=?args] -> V[TENSE=?t, NUM=?n, SUBCAT=?args]
 ARG[CAT=np] -> NP[NUM=?n]
 NP[NUM=?n] -> Noun[NUM=?n]
 
-
-wh -> 'when'
+Wh-adv -> 'when'
 Conj -> 'and'
 ProperNoun[NUM=sg] -> 'Arthur' | 'Guinevere'
 V[TENSE=pres, NUM=sg, SUBCAT=[HEAD=np, TAIL=nil]] -> 'drink'
