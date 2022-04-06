@@ -1,4 +1,5 @@
-S -> Wh-adv S
+S -> WS S
+WS -> Wh-adv
 S -> AUX NP[NUM=?n] VP[TENSE=?t, NUM=?n, SUBCAT=nil]
 
 NP[NUM=?n] -> ProperNoun[NUM=?n] Conj ProperNoun[NUM=?n]
