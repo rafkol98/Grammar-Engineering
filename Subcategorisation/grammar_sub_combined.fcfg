@@ -1,42 +1,39 @@
+S -> WhNP AUX NP VP[SUBCAT=nil]
+S -> SBAR NP VP[SUBCAT=nil]
 S -> NP VP[SUBCAT=nil]
-S -> NP VP[SUBCAT=nil] Conj VP[SUBCAT=nil]
-S -> Wh-NP NP
-S -> Wh-NP VP[SUBCAT=nil]
-S -> Wh-NP AUX NP VP[SUBCAT=nil]
+S -> NP VP[SUBCAT=nil] CC VP[SUBCAT=nil]
+S -> NP VP[SUBCAT=nil] SBAR
+SBAR -> IN S
 
-Wh-NP -> Conj NP
-Wh-NP -> wh
+WhNP -> Wh-adv
 
-NP -> NP VP[SUBCAT=nil]
-NP -> ProperNoun | Noun | Det Noun | Det Nominal
-NP -> ProperNoun Conj ProperNoun
-NP -> Noun Conj Noun
+NP -> Noun |  ProperNoun | Det Noun
+NP -> Noun CC Noun | ProperNoun CC ProperNoun
+NP -> Det Nominal
 
-Nominal -> Adj Nominal | Adj NP
-
-PP -> Prep NP
-
+Nominal -> Adj Nominal
+Nominal -> Adj Noun
 
 VP[SUBCAT=?rest] -> VP[SUBCAT=[HEAD=?arg, TAIL=?rest]] ARG[CAT=?arg]
-VP[SUBCAT=?args] -> V[SUBCAT=?args]
-
 VP[SUBCAT=?args] -> VP[SUBCAT=?args] PP
 VP[SUBCAT=?args] -> V[SUBCAT=?args]
-VP[SUBCAT=?args] -> VP[SUBCAT=?args] PP PP
-VP[SUBCAT=?args] -> AUX NP
 
-
+ARG[CAT=s] -> S
 ARG[CAT=np] -> NP
 ARG[CAT=pp] -> PP
 
-V[SUBCAT=[HEAD=np, TAIL=nil]] -> 'loves' | 'drink' | 'rides' | 'drinks' | 'thinks'
+PP -> Prep NP
+
+# Terminals
+V[SUBCAT=[HEAD=np, TAIL=nil]] -> 'loves' | 'drink' | 'rides' | 'drinks' | 'thinks' | 'love'
 V[SUBCAT=[HEAD=pp, TAIL=nil]] -> 'drinks'
-V[SUBCAT=nil] -> 'sighs' | 'sigh' | 'rides' | 'ride'
+V[SUBCAT=nil] -> 'sighs' | 'sigh' | 'rides' | 'ride' | 'drink'
 ProperNoun -> 'Guinevere' | 'Arthur' | 'Mondays'
-Conj -> 'and' | 'when'
+IN -> 'when'
+CC -> 'and'
 Noun -> 'horses' | 'water' | 'horse' | 'castle' | 'beer'  | 'chalice'
 Det -> 'the'
 Prep -> 'near' | 'on' | 'from'
 Adj -> 'old' | 'white'
-wh -> 'when'
+Wh-adv -> 'when'
 AUX -> 'do' | 'does'

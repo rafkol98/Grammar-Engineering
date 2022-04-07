@@ -2,7 +2,12 @@ S -> WhNP AUX NP[NUM=?n] VP[TENSE=?t, NUM=?n, SUBCAT=nil]
 S -> SBAR NP[NUM=?n] VP[TENSE=?t, NUM=?n, SUBCAT=nil]
 S -> NP[NUM=?n] VP[TENSE=?t, NUM=?n, SUBCAT=nil]
 S -> NP[NUM=?n] VP[TENSE=?t, NUM=?n, SUBCAT=nil] CC VP[TENSE=?t, NUM=?n, SUBCAT=nil]
-SBAR -> IN NP[NUM=?n] VP[TENSE=?t, NUM=?n, SUBCAT=nil]
+S -> NP[NUM=?n] VP[TENSE=?t, NUM=?n, SUBCAT=nil] SBAR
+SBAR -> IN S
+
+# Imperative sentences - extension
+S -> VP[TENSE=?t, NUM=?n, SUBCAT=nil]
+
 
 WhNP -> Wh-adv
 
@@ -27,8 +32,10 @@ PP -> Prep NP[NUM=?n]
 ProperNoun[NUM=sg] -> 'Guinevere' | 'Arthur'
 ProperNoun[NUM=pl] ->  'Mondays'
 V[TENSE=pres, NUM=sg, SUBCAT=[HEAD=s, TAIL=nil]] -> 'thinks'
-V[TENSE=pres, NUM=sg, SUBCAT=nil] -> 'sigh' | 'sighs' | 'rides' | 'ride'
-V[TENSE=pres, NUM=sg, SUBCAT=[HEAD=np, TAIL=nil]] -> 'loves' | 'rides' | 'drinks'
+V[TENSE=pres, NUM=sg, SUBCAT=nil] ->  'sigh' | 'sighs' | 'rides' | 'ride' | 'think'
+V[TENSE=pres, NUM=pl, SUBCAT=nil] -> 'sigh'
+V[TENSE=pres, NUM=sg, SUBCAT=[HEAD=np, TAIL=nil]] -> 'loves' | 'rides' | 'drinks' | 'think'
+V[TENSE=pres, NUM=pl, SUBCAT=[HEAD=np, TAIL=nil]] -> 'love'
 V[TENSE=pres, NUM=sg, SUBCAT=[HEAD=pp, TAIL=nil]] -> 'drinks'
 Noun[NUM=pl]  -> 'horses'
 Noun[NUM=sg] -> 'water' | 'horse' | 'castle' | 'beer' | 'chalice'
