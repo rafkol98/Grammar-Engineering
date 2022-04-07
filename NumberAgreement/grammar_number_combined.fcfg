@@ -6,14 +6,15 @@ SBAR -> IN NP[NUM=?n] VP[TENSE=?t, NUM=?n, SUBCAT=nil]
 
 WhNP -> Wh-adv
 
-NP[NUM=?n] -> Noun[NUM=?n] |  ProperNoun[NUM=?n] | Det Noun[NUM=?n]
+NP[NUM=?n] -> Noun[NUM=?n] |  ProperNoun[NUM=?n] | Det[NUM=?n] Noun[NUM=?n]
 NP[NUM=?n] -> Noun[NUM=?n] CC Noun[NUM=?n] | ProperNoun[NUM=?n] CC ProperNoun[NUM=?n]
-# For "the old white horse"
-NP[NUM=?n] -> Det Adj Adj Noun[NUM=?n]
+NP[NUM=?n] -> Det[NUM=?n] Nominal[NUM=?n]
+
+Nominal[NUM=?n] -> Adj Nominal[NUM=?n]
+Nominal[NUM=?n] -> Adj Noun[NUM=?n]
 
 VP[TENSE=?t, NUM=?n, SUBCAT=?rest] -> VP[TENSE=?t, NUM=?n, SUBCAT=[HEAD=?arg, TAIL=?rest]] ARG[CAT=?arg]
 VP[TENSE=?t, NUM=?n, SUBCAT=?args] -> VP[TENSE=?t, NUM=?n, SUBCAT=?args] PP
-VP[TENSE=?t, NUM=?n, SUBCAT=?args] -> VP[TENSE=?t, NUM=?n, SUBCAT=args] PP PP
 VP[TENSE=?t, NUM=?n, SUBCAT=?args] -> V[TENSE=?t, NUM=?n, SUBCAT=?args]
 
 ARG[CAT=s] -> S
@@ -35,7 +36,8 @@ V[TENSE=pres, NUM=pl, SUBCAT=[HEAD=np, TAIL=nil]] -> 'drink'
 V[TENSE=pres, NUM=sg, SUBCAT=[HEAD=np, TAIL=nil]] -> 'drink'
 IN -> 'when'
 CC -> 'and'
-Det -> 'the'
+Det[NUM=sg] -> 'the'
+Det[NUM=pl] -> 'the'
 Prep -> 'near' | 'on' | 'from'
 Adj -> 'old' | 'white'
 Wh-adv -> 'when'
