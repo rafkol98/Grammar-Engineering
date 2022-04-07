@@ -1,13 +1,6 @@
 # S expansion productions
 S -> WhNP AUX NP[NUM=?n] VP[TENSE=?t, NUM=?n, SUBCAT=nil]
-S -> SBAR NP[NUM=?n] VP[TENSE=?t, NUM=?n, SUBCAT=nil]
 S -> NP[NUM=?n] VP[TENSE=?t, NUM=?n, SUBCAT=nil]
-S -> NP[NUM=?n] VP[TENSE=?t, NUM=?n, SUBCAT=nil] CC VP[TENSE=?t, NUM=?n, SUBCAT=nil]
-S -> NP[NUM=?n] VP[TENSE=?t, NUM=?n, SUBCAT=nil] SBAR
-S -> VP[TENSE=?t, NUM=?n, SUBCAT=nil]
-# For sentences like "horses love drinking water."
-S -> VP[TENSE=?t, NUM=?n, SUBCAT=?args] NP[NUM=?n]
-SBAR -> IN S
 
 # WhNP expansion productions
 WhNP -> Wh-adv | Wh-pronoun
