@@ -1,31 +1,35 @@
+# S expansion productions
 S -> WhNP AUX NP[NUM=?n] VP[TENSE=?t, NUM=?n, SUBCAT=nil]
 S -> SBAR NP[NUM=?n] VP[TENSE=?t, NUM=?n, SUBCAT=nil]
 S -> NP[NUM=?n] VP[TENSE=?t, NUM=?n, SUBCAT=nil]
 S -> NP[NUM=?n] VP[TENSE=?t, NUM=?n, SUBCAT=nil] CC VP[TENSE=?t, NUM=?n, SUBCAT=nil]
 S -> NP[NUM=?n] VP[TENSE=?t, NUM=?n, SUBCAT=nil] SBAR
+S -> VP[TENSE=?t, NUM=?n, SUBCAT=nil]
 SBAR -> IN S
 
-# Imperative sentences - extension
-S -> VP[TENSE=?t, NUM=?n, SUBCAT=nil]
-
-
+# WhNP expansion productions
 WhNP -> Wh-adv
 
+# NP expansion productions
 NP[NUM=?n] -> Noun[NUM=?n] |  ProperNoun[NUM=?n] | Det[NUM=?n] Noun[NUM=?n]
 NP[NUM=?n] -> Noun[NUM=?n] CC Noun[NUM=?n] | ProperNoun[NUM=?n] CC ProperNoun[NUM=?n]
 NP[NUM=?n] -> Det[NUM=?n] Nominal[NUM=?n]
 
+# Nominal expansion productions
 Nominal[NUM=?n] -> Adj Nominal[NUM=?n]
 Nominal[NUM=?n] -> Adj Noun[NUM=?n]
 
+# VP expansion productions
 VP[TENSE=?t, NUM=?n, SUBCAT=?rest] -> VP[TENSE=?t, NUM=?n, SUBCAT=[HEAD=?arg, TAIL=?rest]] ARG[CAT=?arg]
 VP[TENSE=?t, NUM=?n, SUBCAT=?args] -> VP[TENSE=?t, NUM=?n, SUBCAT=?args] PP
 VP[TENSE=?t, NUM=?n, SUBCAT=?args] -> V[TENSE=?t, NUM=?n, SUBCAT=?args]
 
+# ARG expansion productions
 ARG[CAT=s] -> S
 ARG[CAT=np] -> NP[NUM=?n]
 ARG[CAT=pp] -> PP
 
+# PP expansion productions
 PP -> Prep NP[NUM=?n]
 
 # Terminals
@@ -34,7 +38,7 @@ ProperNoun[NUM=pl] ->  'Mondays'
 V[TENSE=pres, NUM=sg, SUBCAT=[HEAD=s, TAIL=nil]] -> 'thinks'
 V[TENSE=pres, NUM=sg, SUBCAT=nil] ->  'sigh' | 'sighs' | 'rides' | 'ride' | 'think'
 V[TENSE=pres, NUM=pl, SUBCAT=nil] -> 'sigh'
-V[TENSE=pres, NUM=sg, SUBCAT=[HEAD=np, TAIL=nil]] -> 'loves' | 'rides' | 'drinks' | 'think'
+V[TENSE=pres, NUM=sg, SUBCAT=[HEAD=np, TAIL=nil]] -> 'loves' | 'rides' | 'drinks' | 'think' | 'ride' | 'sigh'
 V[TENSE=pres, NUM=pl, SUBCAT=[HEAD=np, TAIL=nil]] -> 'love'
 V[TENSE=pres, NUM=sg, SUBCAT=[HEAD=pp, TAIL=nil]] -> 'drinks'
 Noun[NUM=pl]  -> 'horses'
