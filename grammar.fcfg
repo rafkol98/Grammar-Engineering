@@ -6,9 +6,6 @@ S[-INV] -> NP[NUM=?n] VP[TENSE=?t, NUM=?n, SUBCAT=nil, -AUX] CC VP[TENSE=?t, NUM
 S[-INV] -> NP[NUM=?n] VP[TENSE=?t, NUM=?n, SUBCAT=nil, -AUX] SBAR
 S[-INV] -> VP[TENSE=?t, NUM=?n, SUBCAT=nil, -AUX]
 
-S[+INV] -> V[+AUX] NP[NUM=?n] VP[NUM=?n, SUBCAT=nil, +AUX]
-VP[NUM=?n, SUBCAT=nil, +AUX] -> V[NUM=?n, SUBCAT=nil, +AUX] VP[NUM=?n, SUBCAT=nil, +AUX]
-
 SBAR -> IN S
 
 ## WhNP expansion productions
