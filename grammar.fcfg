@@ -37,8 +37,6 @@ ARG[CAT=pp] -> PP
 ## PP expansion productions
 PP -> Prep NP[NUM=?n]
 
-
-
 ## Terminals
 ProperNoun[NUM=sg, -AUX] -> 'Guinevere' | 'Arthur'
 ProperNoun[NUM=pl, -AUX] ->  'Mondays'
