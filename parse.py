@@ -13,7 +13,7 @@ def parse_text(text):
 			print(tree)
 
 		# TODO: remove this line later!
-		print("\n")
+		print("\n\n")
 
 def parse_file(name):
 	f = open(name, 'r')

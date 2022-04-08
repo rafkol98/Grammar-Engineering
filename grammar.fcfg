@@ -1,10 +1,13 @@
 ## S expansion productions
-S -> WhNP AUX NP[NUM=?n] VP[NUM=?n, SUBCAT=nil]
-S -> SBAR NP[NUM=?n] VP[NUM=?n, SUBCAT=nil]
-S -> NP[NUM=?n] VP[NUM=?n, SUBCAT=nil]
-S -> NP[NUM=?n] VP[NUM=?n, SUBCAT=nil] CC VP[NUM=?n, SUBCAT=nil]
-S -> NP[NUM=?n] VP[NUM=?n, SUBCAT=nil] SBAR
-S -> VP[NUM=?n, SUBCAT=nil]
+S[-INV] -> WhNP V[+AUX] NP[NUM=?n] VP[NUM=?n, SUBCAT=nil, -AUX]
+S[-INV] -> SBAR NP[NUM=?n] VP[TENSE=?t, NUM=?n, SUBCAT=nil, -AUX]
+S[-INV] -> NP[NUM=?n] VP[TENSE=?t, NUM=?n, SUBCAT=nil, -AUX]
+S[-INV] -> NP[NUM=?n] VP[TENSE=?t, NUM=?n, SUBCAT=nil, -AUX] CC VP[TENSE=?t, NUM=?n, SUBCAT=nil, -AUX]
+S[-INV] -> NP[NUM=?n] VP[TENSE=?t, NUM=?n, SUBCAT=nil, -AUX] SBAR
+S[-INV] -> VP[TENSE=?t, NUM=?n, SUBCAT=nil, -AUX]
+
+S[+INV] -> V[+AUX] NP[NUM=?n] VP[NUM=?n, SUBCAT=nil, +AUX]
+VP[NUM=?n, SUBCAT=nil, +AUX] -> V[NUM=?n, SUBCAT=nil, +AUX] VP[NUM=?n, SUBCAT=nil, +AUX]
 
 SBAR -> IN S
 
@@ -22,11 +25,11 @@ Nominal[NUM=?n] -> Adj Nominal[NUM=?n]
 Nominal[NUM=?n] -> Adj Noun[NUM=?n]
 
 ## VP expansion productions
-VP[NUM=?n, SUBCAT=?rest] -> VP[NUM=?n, SUBCAT=[HEAD=?arg, TAIL=?rest]] ARG[CAT=?arg]
-VP[NUM=?n, SUBCAT=?args] -> MD[NUM=?n, SUBCAT=?args] VP[NUM=?n, SUBCAT=?args]
-VP[NUM=?n, SUBCAT=?args] -> VP[NUM=?n, SUBCAT=?args] PP
-VP[NUM=?n, SUBCAT=?args] -> V[NUM=?n, SUBCAT=?args]
-VP[NUM=?n, SUBCAT=?args] -> VBG[NUM=?n, SUBCAT=?args]
+VP[TENSE=?t, NUM=?n, SUBCAT=?rest, -AUX] -> VP[TENSE=?t, NUM=?n, SUBCAT=[HEAD=?arg, TAIL=?rest], -AUX] ARG[CAT=?arg]
+VP[TENSE=?t, NUM=?n, SUBCAT=?args, -AUX] -> MD[TENSE=?t, NUM=?n, SUBCAT=?args, -AUX] VP[TENSE=?t, NUM=?n, SUBCAT=?args, -AUX]
+VP[TENSE=?t, NUM=?n, SUBCAT=?args, -AUX] -> VP[TENSE=?t, NUM=?n, SUBCAT=?args, -AUX] PP
+VP[TENSE=?t, NUM=?n, SUBCAT=?args, -AUX] -> V[TENSE=?t, NUM=?n, SUBCAT=?args, -AUX]
+VP[TENSE=?t, NUM=?n, SUBCAT=?args, -AUX] -> VBG[TENSE=?t, NUM=?n, SUBCAT=?args, -AUX]
 
 ## ARG expansion productions
 ARG[CAT=s] -> S
@@ -37,28 +40,36 @@ ARG[CAT=pp] -> PP
 ## PP expansion productions
 PP -> Prep NP[NUM=?n]
 
-## Terminals
-ProperNoun[NUM=sg] -> 'Guinevere' | 'Arthur'
-ProperNoun[NUM=pl] ->  'Mondays'
 
-V[NUM=sg, SUBCAT=nil] ->  'sigh' | 'sighs' | 'rides' | 'ride' | 'think' | 'drinks' | 'drink' | 'loved'
-V[NUM=pl, SUBCAT=nil] -> 'sigh'
+
+## Terminals
+ProperNoun[NUM=sg, -AUX] -> 'Guinevere' | 'Arthur'
+ProperNoun[NUM=pl, -AUX] ->  'Mondays'
+
+# No subcategorisation.
+V[TENSE=pres, NUM=sg, SUBCAT=nil, -AUX] ->  'sigh' | 'sighs' | 'rides' | 'ride' | 'think' | 'drinks' | 'drink'
+V[TENSE=pres, NUM=pl, SUBCAT=nil, -AUX] -> 'sigh'
 
 # Verbs (and gerund form) with S head.
-VBG[NUM=pl, SUBCAT=nil] -> 'drinking'
-V[NUM=pl, SUBCAT=[HEAD=vp, TAIL=nil]] -> 'love'
-V[NUM=sg, SUBCAT=[HEAD=s, TAIL=nil]] -> 'thinks' | 'think'
+VBG[TENSE=pres, NUM=pl, SUBCAT=nil, -AUX] -> 'drinking'
+V[TENSE=pres, NUM=pl, SUBCAT=[HEAD=vp, TAIL=nil], -AUX] -> 'love'
+V[TENSE=pres, NUM=sg, SUBCAT=[HEAD=s, TAIL=nil], -AUX] -> 'thinks' | 'think'
 
 # Verbs with np head.
-V[NUM=sg, SUBCAT=[HEAD=np, TAIL=nil]] -> 'loves' | 'rides' | 'drinks' | 'think' | 'ride' | 'sigh' | 'gives' | 'give' | 'drink'
-V[NUM=pl, SUBCAT=[HEAD=np, TAIL=nil]] -> 'love' | 'drink'
+V[TENSE=pres, NUM=sg, SUBCAT=[HEAD=np, TAIL=nil], -AUX] -> 'loves' | 'rides' | 'drinks' | 'think' | 'ride' | 'sigh' | 'gives' | 'give' | 'drink'
+V[TENSE=pres, NUM=pl, SUBCAT=[HEAD=np, TAIL=nil], -AUX] -> 'love' | 'drink'
 
 # Verbs with pp head.
-V[NUM=sg, SUBCAT=[HEAD=pp, TAIL=nil]] -> 'drinks'
+V[TENSE=pres, NUM=sg, SUBCAT=[HEAD=pp, TAIL=nil], -AUX] -> 'drinks'
+V[TENSE=pres, NUM=sg, SUBCAT=[HEAD=vp, TAIL=nil]] -> 'have'
 
 # Modal and Verbs with vp head.
-MD[NUM=sg, SUBCAT=[HEAD=vp, TAIL=nil]] -> 'may'
-V[NUM=sg, SUBCAT=[HEAD=vp, TAIL=nil]] -> 'have'
+MD[TENSE=pres, NUM=sg, SUBCAT=[HEAD=vp, TAIL=nil], -AUX] -> 'may'
+
+# Past tense verbs.
+V[TENSE=past, NUM=sg, SUBCAT=nil, -AUX] -> 'loved'
+V[TENSE=past, NUM=sg, SUBCAT=[HEAD=np, TAIL=nil], -AUX] -> 'drank' | 'thought'
+V[TENSE=past, NUM=sg, SUBCAT=nil, -AUX] -> 'thought'
 
 # Nouns.
 Noun -> 'water' | 'castle' | 'beer' | 'chalice'
@@ -70,8 +81,10 @@ Noun[NUM=sg] -> 'horse'
 IN -> 'when'
 CC -> 'and'
 Det -> 'the'
-Prep -> 'near' | 'on' | 'from'
+Prep -> 'near' | 'on' | 'from' | 'of'
 Adj -> 'old' | 'white'
 Wh-adv -> 'when'
 Wh-pronoun -> 'what' | 'whom'
-AUX -> 'do'| 'does'
+
+# Auxiliary verbs.
+V[+AUX] -> 'do'| 'does' | 'have'
