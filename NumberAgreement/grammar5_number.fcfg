@@ -1,9 +1,0 @@
-S -> NP[NUM=?n]  VP[TENSE=?t, NUM=?n, SUBCAT=nil]
-NP[NUM=?n]  -> ProperNoun[NUM=?n]
-
-VP[TENSE=?t, NUM=?n, SUBCAT=?args] -> V[TENSE=?t, NUM=?n, SUBCAT=?args]
-
-ProperNoun[NUM=sg] -> 'Arthur'
-V[TENSE=pres,  NUM=sg, SUBCAT=nil] -> 'rides'
-
-

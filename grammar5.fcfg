@@ -1,8 +1,0 @@
-S -> NP VP
-NP -> ProperNoun
-VP -> V
-
-ProperNoun -> 'Arthur'
-V -> 'rides'
-
-
